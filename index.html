@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="proposalSection">
+        <div class="header">
+            <h1 class="header_text">Will you be my Valentine queen ?</h1>
+            <p class="sub_text">Your presence is what makes my day complete. Let's make 14Feb special together meow.</p>
+        </div>
+        <div class="gif_container">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNm5xZ3l3d2pnYzFocmpxOHJ4ZHVmd2IxNGhrdmlkMG1rYmpqa3AwaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/l2FSi4zPU5dnLyd7Q4/giphy.gif" alt="Heartwarming Animation">
+        </div>
+        <div class="buttons">
+            <button class="btn" onclick="showResponse(true)">Yes, I'd love to 💖</button>
+            <button class="btn" onmouseover="moveButton(this)">Let me think... 🤔</button>
+        </div>
+    </div>
+    <div class="container" id="responseSection" style="display:none;">
+        <div class="header">
+            <h1 class="header_text">مسمسينسمينسنبت You Said Yes!</h1>
+            <p class="sub_text">I'm thrilled to hear your answer, and I can't wait to make 14Feb a day to remember. Here's to us and the beautiful moments we will share together!</p>
+        </div>
+        <div class="gif_container">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZG9rcWg1dnRxdDQ5eW9qeWU4YnFjMWFyZGl3NXk1ZHQ5aG5lcHNxbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cQSjIBgUC2NbMKEm9q/giphy.gif" alt="Celebratory Animation">
+        </div>
+        <div class="message">
+            <p class="thank_you">Thank you for making me the happiest! 💖<br> From UR cat Meow 😻 </p>
+           
+        </div>
+    </div>
+    <script>
+        function showResponse(yes) {
+            if (yes) {
+                document.getElementById('proposalSection').style.display = 'none';
+                document.getElementById('responseSection').style.display = 'block';
+            } else {
+                
+            }
+        }
+
+        function moveButton(button) {
+            var x = Math.random() * (window.innerWidth - button.offsetWidth);
+            var y = Math.random() * (window.innerHeight - button.offsetHeight);
+            button.style.position = 'fixed'; 
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
