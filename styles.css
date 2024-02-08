@@ -1,11 +1,11 @@
 body, html {
     margin: 0;
     padding: 0;
-    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: #fce4ec; 
+    background-color: #fce4ec; /* Soft pink background for a romantic feel */
     font-family: 'Nunito', sans-serif;
 }
 
@@ -15,59 +15,37 @@ body, html {
     border-radius: 10px;
     background: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 600px; 
-    margin: 20px 0; 
-}
-
-.header_text, .sub_text {
-    margin: 10px 0;
+    max-width: 90%;
 }
 
 .header_text {
     color: #e91e63;
-    font-size: 1.5rem; 
+    font-size: 2rem; /* Responsive font size */
+}
 
 .sub_text, .thank_you {
     color: #666;
+    margin-top: 10px;
     font-size: 1rem;
 }
 
-.gif_container img {
-    width: 100%; 
-    height: auto;
-    max-width: 400px; 
-    margin: auto; 
+.gif_container {
+    margin: 20px 0;
 }
 
 .btn {
-    padding: 12px 24px;
-    border-radius: 25px;
+    padding: 10px 20px;
+    border-radius: 20px; 
     border: none;
     cursor: pointer;
     font-size: 1rem;
     color: white;
     margin: 10px;
+    transition: transform 0.2s;
     background-color: #ff4081;
-    transition: background-color 0.3s, transform 0.2s;
 }
 
 .btn:hover {
-    background-color: #e91e63;
-    transform: scale(1.1); 
-}
-
-@media (max-width: 480px) {
-    .header_text {
-        font-size: 1.2rem; 
-    }
-
-    .sub_text, .thank_you {
-        font-size: 0.9rem;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.9rem; 
-    }
+    background-color: #e91e63; 
+    transform: scale(1.05); 
 }
